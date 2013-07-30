@@ -1,5 +1,9 @@
-Twitter Bootstrap Hover Dropdown Plugin
-=======================================
+## Twitter Bootstrap Hover Dropdown Plugin w/ HoverIntent
+
+
+Forked from the original to provide support for jQuery hoverIntent:
+http://cherne.net/brian/resources/jquery.hoverIntent.html
+
 
 A simple plugin to enable twitter bootstrap dropdowns to activate on hover and provide a nice user experience.
 
