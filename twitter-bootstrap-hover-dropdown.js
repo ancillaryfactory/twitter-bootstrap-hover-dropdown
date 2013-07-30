@@ -3,7 +3,7 @@
  * Author: Cameron Spear
  * Contributors: Mattia Larentis
  *
- * Dependencies?: Twitter Bootstrap's Dropdown plugin
+ * Dependencies?: Twitter Bootstrap's Dropdown plugin, jQuery HoverIntent
  *
  * A simple plugin to enable twitter bootstrap dropdowns to active on hover and provide a nice user experience.
  *
@@ -38,7 +38,7 @@
                 settings = $.extend(true, {}, defaults, options, data),
                 timeout;
 
-            $parent.hover(function(event) {
+            $parent.hoverIntent(function(event) {
                 // so a neighbor can't open the dropdown
                 if(!$parent.hasClass('open') && !$this.is(event.target)) {
                     return true;
@@ -61,7 +61,7 @@
             });
 
             // this helps with button groups!
-            $this.hover(function() {
+            $this.hoverIntent(function() {
                 if(shouldHover) {
                     if(settings.instantlyCloseOthers === true)
                         $allDropdowns.removeClass('open');
@@ -75,7 +75,7 @@
             $parent.find('.dropdown-submenu').each(function(){
                 var $this = $(this);
                 var subTimeout;
-                $this.hover(function() {
+                $this.hoverIntent(function() {
                     if(shouldHover) {
                         window.clearTimeout(subTimeout);
                         $this.children('.dropdown-menu').show();
